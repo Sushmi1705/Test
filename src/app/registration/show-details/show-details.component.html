@@ -1,0 +1,87 @@
+<div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel1">Update</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+
+        <form>
+          <div class="mb-3">
+              <label for="txtName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="txtName" aria-describedby="emailHelp" name ="name" >
+          </div>
+          <div class="mb-3">
+              <label for="txtFranchise" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="txtFranchise" aria-describedby="emailHelp" name = "franchise" >
+          </div>
+          <div class="mb-3">
+              <label for="txtImageurl" class="form-label">DOB</label>
+              <input type="text" class="form-control" id="txtImageurl" aria-describedby="emailHelp" name = "imageurl" >
+          </div>
+          <div class="mb-3">
+              <label for="txtPowers" class="form-label">Email</label>
+              <input type="email" class="form-control" id="txt" aria-describedby="emailHelp" name = "imageurl" >          </div>
+          <button type = "button" class = "btn btn-primary"  >update</button>
+      </form>
+
+
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger" (click) = "delete()">Confirm Delete</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Warning</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger" (click) = "DeleteData()">Confirm Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="heading-with-border">
+  <h1 class="heading">Users List</h1>
+  <button class="my-button" routerLink="/registration-form">Register</button>
+</div>
+
+
+<div class="flexible-table">
+  <div class="table-row header-row">
+    <div class="table-cell">firstname</div>
+    <div class="table-cell">lastname</div>
+    <div class="table-cell">dob</div>
+    <div class="table-cell">email</div>
+    <div class="table-cell">Update</div>
+    <div class="table-cell">Delete</div>  
+    <!-- Add more column headers as needed -->
+  </div>
+  <div class="table-row" *ngFor="let item of allFormDetails">
+    <div class="table-cell">{{item.firstname}}</div>
+    <div class="table-cell">{{item.lastname}}</div>
+    <div class="table-cell">{{item.dob}}</div>
+    <div class="table-cell">{{item.email}}</div>
+    <div class="table-cell"><button class="primary-button"(click) = "openUpdatePopup(item._id)">Update</button></div>
+    <div class="table-cell"><button class="danger-button" (click) = "openDeletePopup(item._id)">Delete</button></div>
+    <!-- Add more cells and bind data as needed -->
+  </div>
+</div>

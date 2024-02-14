@@ -1,0 +1,65 @@
+/* registration.component.css */
+/* div {
+    max-width: auto;
+    margin: auto;
+  } */
+  form {
+    max-width: 300px;
+    margin: auto;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input {
+    margin-bottom: 15px;
+    padding: 8px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  h2{
+    display:flex;
+  }
+  
+  .heading-with-border {
+    max-width: auto;
+    display:flex;
+    /* border-bottom: 2px solid #ccc; */
+    align-items: center;
+  }
+
+  .heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  .my-button {
+    display: inline-block;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: auto;
+    background-color:hwb(146 9% 27%);
+  }
+  .my-button:hover {
+    background-color: rgb(27, 92, 55);;
+  }

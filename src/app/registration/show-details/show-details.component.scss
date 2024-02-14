@@ -1,0 +1,125 @@
+/* show-details.component.scss */
+
+// Variable declaration
+$primary-color: #007bff;
+
+// Component styles
+.details-container {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.details-heading {
+  font-size: 24px;
+  color: $primary-color; // Using variable
+}
+.flexible-table {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+  }
+  
+  .table-row {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #ccc;
+  }
+  
+  .header-row {
+    font-weight: bold;
+  }
+  
+  .table-cell {
+    flex: 1;
+    padding: 8px;
+    border-right: 1px solid #ccc;
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+  
+  .table-cell:last-child {
+    border-right: none;
+  }
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+  }  
+  .heading-with-border {
+    max-width: auto;
+    display:flex;
+    border-bottom: 2px solid #ccc;
+    align-items: center;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    // font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+.danger-button{
+    @extend .button;
+    color: #fff;
+    background-color: red;
+}
+.danger-button:hover {
+    background-color: hwb(0 5% 35%);
+}
+
+  // Default button style
+.primary-button {
+    @extend .button;
+    background-color: #007bff; // Primary color
+    color: #fff; // Text color
+  }
+  
+  // Hover effect
+  .primary-button:hover {
+    background-color: #0056b3; // Darker shade of primary color
+  }
+  
+  // Active (pressed) state
+  .primary-button:active {
+    background-color: #0056b3; // Same as hover color
+  }
+
+  .header-row{
+    background-color: #f0f0f0; // Background color
+    font-weight: bold;
+    text-align: left; // Adjust alignment as needed
+    // padding: 10px;
+  }
+
+  // component.scss
+
+.heading-button-container {
+    display: flex;
+    align-items: center; // Align items vertically
+  }
+  
+  .heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 10px; // Adjust spacing between heading and button
+  }
+  
+  .my-button {
+    @extend .button;
+    // padding: 10px 20px;
+    // font-size: 16px;
+    margin-left: auto;
+    background-color:hwb(146 9% 27%);
+  }
+  .my-button:hover {
+    background-color: rgb(27, 92, 55);;
+  }
+  h2{
+    display:flex;
+  }
+  
